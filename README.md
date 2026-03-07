@@ -87,16 +87,16 @@ The notebooks implement a medallion-style flow:
 - Metrics: RMSE, R2, MAE
 
 ## Repository Structure
-- `01_ingest_bronze.ipynb`
-- `02_clean_silver.ipynb`
-- `03_exploratory_data_analysis_gold.ipynb`
-- `04_model_training_and_evaluation_shared.ipynb`
-- `04_model_training_and_evaluation_logistic_regression.ipynb`
-- `04_model_training_and_evaluation_random_forest.ipynb`
-- `04_model_training_and_evaluation_comparision.ipynb`
-- `05_model_interpretation_error_analysis_and_final_outputs.ipynb`
-- `05_model_interpretation_error_analysis_and_final_outputs_interpretation_only.ipynb`
-- `05_model_interpretation_error_analysis_and_final_outputs_fare_regression.ipynb`
+- `notebooks/01_ingest_bronze.ipynb`
+- `notebooks/02_clean_silver.ipynb`
+- `notebooks/03_exploratory_data_analysis_gold.ipynb`
+- `notebooks/04_model_training_and_evaluation_shared.ipynb`
+- `notebooks/04_model_training_and_evaluation_logistic_regression.ipynb`
+- `notebooks/04_model_training_and_evaluation_random_forest.ipynb`
+- `notebooks/04_model_training_and_evaluation_comparision.ipynb`
+- `notebooks/05_model_interpretation_error_analysis_and_final_outputs.ipynb`
+- `notebooks/05_model_interpretation_error_analysis_and_final_outputs_interpretation_only.ipynb`
+- `notebooks/05_model_interpretation_error_analysis_and_final_outputs_fare_regression.ipynb`
 - `data/` (lookup + geojson assets)
 - `requirements/` (assignment brief, proposal text, references)
 
@@ -112,17 +112,17 @@ Run notebooks in this order.
   - You can upload `data/taxi_zone_lookup.csv` and register it as that table.
 
 2. Notebook execution order
-1. `01_ingest_bronze.ipynb`
-2. `02_clean_silver.ipynb`
-3. `03_exploratory_data_analysis_gold.ipynb`
-4. `04_model_training_and_evaluation_logistic_regression.ipynb`
-5. `04_model_training_and_evaluation_random_forest.ipynb`
-6. `04_model_training_and_evaluation_comparision.ipynb`
-7. `05_model_interpretation_error_analysis_and_final_outputs.ipynb`
+1. `notebooks/01_ingest_bronze.ipynb`
+2. `notebooks/02_clean_silver.ipynb`
+3. `notebooks/03_exploratory_data_analysis_gold.ipynb`
+4. `notebooks/04_model_training_and_evaluation_logistic_regression.ipynb`
+5. `notebooks/04_model_training_and_evaluation_random_forest.ipynb`
+6. `notebooks/04_model_training_and_evaluation_comparision.ipynb`
+7. `notebooks/05_model_interpretation_error_analysis_and_final_outputs.ipynb`
 
 Optional:
-8. `05_model_interpretation_error_analysis_and_final_outputs_interpretation_only.ipynb`
-9. `05_model_interpretation_error_analysis_and_final_outputs_fare_regression.ipynb`
+8. `notebooks/05_model_interpretation_error_analysis_and_final_outputs_interpretation_only.ipynb`
+9. `notebooks/05_model_interpretation_error_analysis_and_final_outputs_fare_regression.ipynb`
 
 Notes:
 - Notebooks use Databricks widgets for table names and key parameters.
@@ -163,7 +163,7 @@ Optional regression outputs:
 ## Reproducibility Notes
 - Train/test split uses fixed seed (`42`) and persisted split tables.
 - Classification modeling excludes cash trips from the target task to avoid unobserved tip labels.
-- Feature engineering and model logic are centralized in `04_model_training_and_evaluation_shared.ipynb`.
+- Feature engineering and model logic are centralized in `notebooks/04_model_training_and_evaluation_shared.ipynb`.
 
 ## Limitations
 - Dataset covers a 2-week window only (not full-year seasonality).
